@@ -1,0 +1,4 @@
+AH00557: httpd: apr_sockaddr_info_get() failed for Marcins-MacBook-Pro.local
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 14 17:57:47.934651 2024] [mpm_event:notice] [pid 10490:tid 140704377355136] AH00489: Apache/2.4.43 (Unix) configured -- resuming normal operations
+[Sun Jan 14 17:57:47.935409 2024] [core:notice] [pid 10490:tid 140704377355136] AH00094: Command line: '/Users/marcin/Library/Application Support/Local/lightning-services/apache-2.4.43+8/bin/darwin/bin/httpd -D FOREGROUND -f /Users/marcin/Library/Application Support/Local/run/McSlETDuy/conf/apache/apache2.conf'
