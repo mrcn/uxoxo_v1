@@ -41,7 +41,10 @@ function include_template_from_folder( $template ) {
 }
 add_filter('template_include', 'include_template_from_folder');
 
-
+function enqueue_custom_script() {
+         wp_enqueue_script( 'uxoxo-scripts', get_stylesheet_directory_uri() . '/js/uxoxo-scripts.js', array(), '1.0', true );
+     }
+     add_action( 'wp_enqueue_scripts', 'enqueue_custom_script' );
 
 
 ?>
