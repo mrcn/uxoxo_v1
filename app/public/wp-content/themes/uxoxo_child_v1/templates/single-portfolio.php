@@ -19,6 +19,15 @@
             </div><!-- .portfolio-column -->
             <div class="toc-column">
                 <div class="sticky-toc">
+                    <h3>heading</h3>
+                    <h3>heading</h3>
+                    <h3>heading</h3>
+                    <h3>heading</h3>
+                    <h3>heading</h3>
+                    <h3>heading</h3>
+                    <h3>heading</h3>
+                    <h3>heading</h3>
+                    <h3>heading</h3>
                     <!-- Insert your code to generate the table of contents here -->
                 </div><!-- .sticky-toc -->
             </div><!-- .toc-column -->

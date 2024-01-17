@@ -18,6 +18,7 @@ Template: twentytwentyfour
 .portfolio-column {
   width: 70%;
   background-color: brown;
+  padding: 100px 25px 100px 25px;
 }
   
 .toc-column {
