@@ -32,3 +32,19 @@ Template: twentytwentyfour
   position: -webkit-sticky;
   position: sticky;
 }
+
+.sticky-toc li {
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sticky-toc a {
+  text-decoration: none;
+}
+
+/* animate this */
+.sticky-toc a:hover {
+  text-decoration: underline;
+}
