@@ -8,25 +8,27 @@ Version: 1.0
 Template: twentytwentyfour
 */
 
-
 /* Single Portfolio Template */
 .two-column-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  /* flex-wrap: wrap; */
+  background-color: chartreuse;
+}
   
-  .portfolio-column {
-    width: 70%;
-  }
+.portfolio-column {
+  width: 70%;
+  background-color: brown;
+}
   
-  .toc-column {
-    width: 30%;
-  }
-  
-  .sticky-toc {
-    position: sticky;
-    top: 0;
-    padding-top: 30px;
-  }
+.toc-column {
+  padding: 20px;
+  width: 200px;
+  background-color: darkorchid;
+}
 
-
+.sticky-toc {
+  top: 20px;
+  background-color: rgb(170, 118, 196);
+  position: -webkit-sticky;
+  position: sticky;
+}
