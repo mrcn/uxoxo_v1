@@ -11,14 +11,13 @@ Template: twentytwentyfour
 /* Single Portfolio Template */
 .two-column-wrapper {
   display: flex;
-  /* flex-wrap: wrap; */
   background-color: chartreuse;
 }
   
 .portfolio-column {
   width: 70%;
   background-color: brown;
-  padding: 100px 25px 100px 25px;
+  padding: 100px 25px 700px 25px;
 }
   
 .toc-column {
@@ -28,7 +27,7 @@ Template: twentytwentyfour
 }
 
 .sticky-toc {
-  top: 20px;
+  top: 40px;
   background-color: rgb(170, 118, 196);
   position: -webkit-sticky;
   position: sticky;

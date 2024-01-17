@@ -8,26 +8,43 @@
     <main id="main" class="site-main" role="main">
         <div class="two-column-wrapper">
             <div class="portfolio-column">
-                <?php
+            <?php
                 while ( have_posts() ) : the_post();
-                    // Your portfolio content will go here.
-                    // For now, you can just display post content.
                     the_title();
-                    the_content();
+
+                    $content = get_the_content();
+                    $doc = new DOMDocument();
+                    @$doc->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
+                    
+                    $headings = [];
+                    foreach (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as $h) {
+                        foreach ($doc->getElementsByTagName($h) as $node) {
+                            $id = sanitize_title($node->textContent);
+                            $headings[$id] = $node->textContent;
+                            $node->setAttribute('id', $id);
+                        }
+                    }
+
+                    echo $doc->saveHTML();
+
                 endwhile; // End of the loop.
                 ?>
+
+ 
             </div><!-- .portfolio-column -->
             <div class="toc-column">
                 <div class="sticky-toc">
-                    <h3>heading</h3>
-                    <h3>heading</h3>
-                    <h3>heading</h3>
-                    <h3>heading</h3>
-                    <h3>heading</h3>
-                    <h3>heading</h3>
-                    <h3>heading</h3>
-                    <h3>heading</h3>
-                    <h3>heading</h3>
+                <?php
+                    if (!empty($headings)) {
+                        echo '<ul>';
+                        foreach ($headings as $id => $text) {
+                            echo '<li><a href="#' . $id . '">' . esc_html($text) . '</a></li>';
+                        }
+                        echo '</ul>';
+                    }
+                ?>
+
+
                     <!-- Insert your code to generate the table of contents here -->
                 </div><!-- .sticky-toc -->
             </div><!-- .toc-column -->
